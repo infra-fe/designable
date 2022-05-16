@@ -6,8 +6,9 @@ pages:
   script:
     - yarn --ignore-engines
     - yarn build:docs-formily
+    - mv formily/antd/build public
   artifacts:
     paths:
-      - formily/antd/build
+      - public
   only:
     - ytf/feat-formily-infrad

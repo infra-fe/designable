@@ -1,0 +1,13 @@
+default:
+  image: harbor.shopeemobile.com/shopee-fe-sr/nodejs:v12
+
+pages:
+  stage: deploy
+  script:
+    - yarn --ignore-engines
+    - yarn build:docs-formily
+  artifacts:
+    paths:
+      - formily/antd/build
+  only:
+    - ytf/feat-formily-infrad

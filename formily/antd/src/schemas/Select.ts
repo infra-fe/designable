@@ -18,6 +18,11 @@ export const Select: ISchema = {
       'x-decorator': 'FormItem',
       'x-component': 'Switch',
     },
+    placeholder: {
+      type: 'string',
+      'x-decorator': 'FormItem',
+      'x-component': 'Input',
+    },
     autoClearSearchValue: {
       type: 'boolean',
       'x-decorator': 'FormItem',
@@ -130,12 +135,6 @@ export const Select: ISchema = {
         defaultValue: 'Not Found',
       },
     },
-    placeholder: {
-      type: 'string',
-      'x-decorator': 'FormItem',
-      'x-component': 'Input',
-    },
-
     size: {
       type: 'string',
       enum: ['large', 'small', 'middle', null],

@@ -3,6 +3,16 @@ import { ISchema } from '@formily/react'
 export const Input: ISchema & { TextArea?: ISchema } = {
   type: 'object',
   properties: {
+    maxLength: {
+      type: 'number',
+      'x-decorator': 'FormItem',
+      'x-component': 'NumberPicker',
+    },
+    placeholder: {
+      type: 'string',
+      'x-decorator': 'FormItem',
+      'x-component': 'Input',
+    },
     addonBefore: {
       type: 'string',
       'x-decorator': 'FormItem',
@@ -36,16 +46,6 @@ export const Input: ISchema & { TextArea?: ISchema } = {
         defaultChecked: true,
       },
     },
-    maxLength: {
-      type: 'number',
-      'x-decorator': 'FormItem',
-      'x-component': 'NumberPicker',
-    },
-    placeholder: {
-      type: 'string',
-      'x-decorator': 'FormItem',
-      'x-component': 'Input',
-    },
     size: {
       type: 'string',
       enum: ['large', 'small', 'middle', null],
@@ -61,14 +61,6 @@ export const Input: ISchema & { TextArea?: ISchema } = {
 Input.TextArea = {
   type: 'object',
   properties: {
-    bordered: {
-      type: 'boolean',
-      'x-decorator': 'FormItem',
-      'x-component': 'Switch',
-      'x-component-props': {
-        defaultChecked: true,
-      },
-    },
     maxLength: {
       type: 'number',
       'x-decorator': 'FormItem',
@@ -79,12 +71,20 @@ Input.TextArea = {
       'x-decorator': 'FormItem',
       'x-component': 'Input',
     },
-    autoSize: {
-      type: 'boolean',
+    showCount: {
       'x-decorator': 'FormItem',
       'x-component': 'Switch',
     },
-    showCount: {
+    bordered: {
+      type: 'boolean',
+      'x-decorator': 'FormItem',
+      'x-component': 'Switch',
+      'x-component-props': {
+        defaultChecked: true,
+      },
+    },
+    autoSize: {
+      type: 'boolean',
       'x-decorator': 'FormItem',
       'x-component': 'Switch',
     },

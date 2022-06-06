@@ -100,6 +100,15 @@ export const createFieldSchema = (
             'x-decorator': 'FormItem',
             'x-component': 'Input.TextArea',
           },
+          required: {
+            type: 'boolean',
+            'x-decorator': 'FormItem',
+            'x-component': 'Switch',
+          },
+          default: {
+            'x-decorator': 'FormItem',
+            'x-component': 'ValueInput',
+          },
           'x-display': {
             type: 'string',
             enum: ['visible', 'hidden', 'none', ''],
@@ -118,10 +127,6 @@ export const createFieldSchema = (
               defaultValue: 'editable',
             },
           },
-          default: {
-            'x-decorator': 'FormItem',
-            'x-component': 'ValueInput',
-          },
           enum: {
             'x-decorator': 'FormItem',
             'x-component': DataSourceSetter,
@@ -133,11 +138,6 @@ export const createFieldSchema = (
           'x-validator': {
             type: 'array',
             'x-component': ValidatorSetter,
-          },
-          required: {
-            type: 'boolean',
-            'x-decorator': 'FormItem',
-            'x-component': 'Switch',
           },
         },
       },

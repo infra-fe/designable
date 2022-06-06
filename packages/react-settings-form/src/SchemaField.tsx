@@ -15,6 +15,7 @@ import {
   FormGrid,
   FormLayout,
   FormTab,
+  FormStep,
 } from '@formily/antd'
 import { Slider } from 'antd'
 import {
@@ -74,5 +75,6 @@ export const SchemaField = createSchemaField({
     FormGrid,
     FormLayout,
     FormTab,
+    FormStep,
   },
 })

@@ -42,6 +42,19 @@ export const Upload: ISchema & { Dragger?: ISchema } = {
         optionType: 'button',
       },
     },
+    showUploadList: {
+      type: 'boolean',
+      'x-decorator': 'FormItem',
+      'x-component': 'Switch',
+      'x-component-props': {
+        defaultChecked: true,
+      },
+    },
+    withCredentials: {
+      type: 'boolean',
+      'x-decorator': 'FormItem',
+      'x-component': 'Switch',
+    },
     data: {
       'x-decorator': 'FormItem',
       'x-component': 'ValueInput',
@@ -83,19 +96,6 @@ export const Upload: ISchema & { Dragger?: ISchema } = {
       'x-component-props': {
         defaultChecked: true,
       },
-    },
-    showUploadList: {
-      type: 'boolean',
-      'x-decorator': 'FormItem',
-      'x-component': 'Switch',
-      'x-component-props': {
-        defaultChecked: true,
-      },
-    },
-    withCredentials: {
-      type: 'boolean',
-      'x-decorator': 'FormItem',
-      'x-component': 'Switch',
     },
   },
 }

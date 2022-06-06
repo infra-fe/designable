@@ -22,6 +22,11 @@ const CommonDatePickerAPI = {
       defaultChecked: true,
     },
   },
+  placeholder: {
+    type: 'string',
+    'x-decorator': 'FormItem',
+    'x-component': 'Input',
+  },
   disabledTime: {
     'x-decorator': 'FormItem',
     'x-component': 'ValueInput',
@@ -40,11 +45,6 @@ const CommonDatePickerAPI = {
     type: 'boolean',
     'x-decorator': 'FormItem',
     'x-component': 'Switch',
-  },
-  placeholder: {
-    type: 'string',
-    'x-decorator': 'FormItem',
-    'x-component': 'Input',
   },
   size: {
     type: 'string',

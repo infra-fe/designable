@@ -19,24 +19,27 @@ export const ActionsWidget = observer(() => {
   }, [])
   return (
     <Space style={{ marginRight: 10 }}>
-      <Button href="https://designable-fusion.formilyjs.org">
+      {/* <Button href="https://designable-fusion.formilyjs.org">
         Alibaba Fusion
-      </Button>
+      </Button> */}
       <Radio.Group
         value={GlobalRegistry.getDesignerLanguage()}
         optionType="button"
         options={[
           { label: 'English', value: 'en-us' },
           { label: '简体中文', value: 'zh-cn' },
-          { label: '한국어', value: 'ko-kr' },
+          // { label: '한국어', value: 'ko-kr' },
         ]}
         onChange={(e) => {
           GlobalRegistry.setDesignerLanguage(e.target.value)
         }}
       />
-      <Button href="https://github.com/alibaba/designable" target="_blank">
+      <Button
+        href="https://git.garena.com/shopee/InfraFe/designable"
+        target="_blank"
+      >
         <GithubOutlined />
-        Github
+        Gitlab
       </Button>
       <Button
         onClick={() => {
